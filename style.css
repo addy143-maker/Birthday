@@ -51,27 +51,28 @@ main {
 .item:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
 
 .content {
-  width: min(30vw, 400px);
+  /* Instead of being too narrow, let it adapt better */
+  width: clamp(260px, 35vw, 450px);   /* keeps it readable across screens */
+  max-width: 90%;                     /* prevent overflow on small devices */
+  
   position: absolute;
   top: 50%;
-  left: 3rem;
+  left: 2rem;                         /* smaller padding on mobile */
   transform: translateY(-50%);
-  font-family: helvetica, sans-serif;
+  font: 400 0.9rem/1.6 "Helvetica", sans-serif;
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
   opacity: 0;
   display: none;
+
   background: rgba(0,0,0,0.45);
   padding: 1.2rem;
   border-radius: 12px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
+  word-wrap: break-word;              /* allows proper wrapping */
+  overflow-wrap: break-word;          /* modern support */
 }
-
 
 .content .title {
   font-family: 'arial-black', sans-serif;
