@@ -61,11 +61,6 @@ main {
   text-shadow: 0 3px 8px rgba(0,0,0,0.5);
   opacity: 0;
   display: none;
-
-  background: rgba(0,0,0,0.45);   /* 👈 darker bg behind text */
-  padding: 1rem;
-  border-radius: 10px;
-  backdrop-filter: blur(6px);     /* 👈 blur makes it readable */
 }
 
 .content .title {
