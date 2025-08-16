@@ -57,10 +57,16 @@ main {
   left: 3rem;
   transform: translateY(-50%);
   font: 400 0.85rem helvetica,sans-serif;
-  color: black;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  color: white;                        /* 👈 make text white for contrast */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
   opacity: 0;
   display: none;
+   /* 👇 blur-glass effect */
+  background: rgba(0,0,0,0.45);        /* dark glass background */
+  padding: 1.2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);         /* adds blur effect */
+  -webkit-backdrop-filter: blur(10px); /* safari support */
 }
 
 .content .title {
@@ -76,12 +82,21 @@ main {
 
 .content button {
   width: fit-content;
-  background-color: rgba(0,0,0,0.1);
-  color: black;
-  border: 2px solid black;
-  border-radius: 0.25rem;
-  padding: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.5); /* darker semi-transparent for better contrast */
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px); /* adds glassy effect */
+}
+
+.content button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05); /* slight zoom effect */
 }
 
 .item:nth-of-type(2) .content {
