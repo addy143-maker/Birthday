@@ -62,46 +62,35 @@ main {
 
 .content {
   position: absolute;
-  top: 50%;
-  left: 2rem;
-  transform: translateY(-50%);
-  width: min(35vw, 420px);
-  background: rgba(0, 0, 0, 0.55); /* semi-transparent bg for readability */
-  padding: 1.5rem;
-  border-radius: 12px;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
   color: #fff;
+  z-index: 2;
   font-family: helvetica, sans-serif;
-  opacity: 0;
-  display: none;
 }
 
 .content .title {
   font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .content .description {
-  line-height: 1.6;
-  margin: 1rem 0 1.5rem;
   font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .content button {
-  width: fit-content;
-  background-color: #fff;
+  margin-top: 0.75rem;
+  background: #fff;
   color: #000;
   border: none;
-  border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
-  transition: background 0.3s;
-}
-
-.content button:hover {
-  background-color: #ddd;
 }
 
 .item:nth-of-type(2) .content {
