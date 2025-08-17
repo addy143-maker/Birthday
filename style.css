@@ -146,16 +146,17 @@ main {
 
 /* Mobile */
 @media (max-width: 650px) {
-  body {
-    display: block;
+  .item::after { display: none; }
+  .content {
+    position: relative;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    padding: 1rem;
   }
+}
 
-  main {
-    flex-direction: column;
-    justify-content: flex-start;
-    height: auto;
-    min-height: 100vh;
-  }
 
   .item {
     width: 100%;
